@@ -1,9 +1,27 @@
 //////////////////PROBLEM 1////////////////////
 
-// Write a function called stringItOut that takes in an array. Determine if it is an array of numbers or strings and sort it greatest to least accordingly (sort strings alphabetically). Return the array converted into a string using the toString method.
+// Write a function called stringItOut that takes in an array. 
+// Determine if it is an array of numbers or strings and sort it greatest to least accordingly (sort strings alphabetically). 
+// Return the array converted into a string using the toString method.
 
-//Code here
+const stringItOut = (array) => {
+  let types = array.map(element => typeof(element))
+  let number = types.every(element => element === 'number')
+  let string = types.every(element => element === 'string')
 
+  if (number) {
+    arr = array.sort((a, b) => {
+      if (number) {
+        return b - a
+      }
+    })
+  } else if (string) {
+    array = array.sort().reverse()
+  } else {
+    array = ['please send help where am I']
+  }
+  return array.toString()
+}
 
 //////////////////PROBLEM 2////////////////////
 
@@ -17,4 +35,4 @@ function complex(num1, num2) {
   return Math.sin((Math.log(num1) + Math.tan(num2) * 100))
 }
 
-//Code here
+mathResult = math(complex, 2, 3)

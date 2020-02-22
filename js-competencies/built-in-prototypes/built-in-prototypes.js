@@ -9,10 +9,9 @@
 //dragonMapper should return the the new array. You should
 //use the built-in array method .map
   
-  //Code here
-
-
-
+const dragonMapper = (arr) => {
+  return arr.map(str => str += '...here be dragons')
+}
 //////////////////PROBLEM 2////////////////////
 
 //Write a function called cookieLoversOnly that takes 
@@ -20,7 +19,9 @@
 //does NOT have the key favoriteCookie.
 //cookieLoversOnly should return the filtered array.
   
-  //Code here
+const cookieLoversOnly = (arr) => {
+  return arr.filter(obj => obj['favoriteCookie'])
+}
 
 
 //////////////////PROBLEM 3////////////////////
@@ -33,10 +34,9 @@
 //the callback function as an argument every time it is invoked.
 //Hint: there is an array method for this.
 
-
-  //Code here
-
-
+const changeValue = (arr, cb) => {
+  arr.forEach(element => cb(element))
+}
 
 //////////////////PROBLEM 4////////////////////
 
@@ -46,16 +46,16 @@
 //of multiplying all the elements together)
 //Return the product.
   
-  //Code here
+  const findProduct = (arr) => {
+    return arr.reduce((accumulator, curr) => accumulator * curr)
+  }
 
 
 //////////////////PROBLEM 5////////////////////
 
-//Write a function called cipherize that takes in 
-//an array, and a string. It should use the 
-//array method .indexOf to find the index of the passed-in 
-//string in the array. Then, it should use the method .charAt
-//to find the character at that index, in the string. 
+//Write a function called cipherize that takes in an array, and a string. 
+// It should use the array method .indexOf to find the index of the passed-in string in the array. 
+// Then, it should use the method .charAt to find the character at that index, in the string. 
 //Return that character.
 
 //EX: cipherize(["hello", "world", "wide", "web"], "wide")
@@ -63,15 +63,17 @@
 // character at index 2 of "wide": "d"
 // cipherize will return: "d"
 
-  //Code here
+  const cipherize = (arr, str) => {
+    return str.charAt(arr.indexOf(str))
+  }
 
 
 
 //////////////////PROBLEM 6////////////////////
 
-//Write a function called reverseMe that takes in 
-//a string, reverses it, and returns the reversed 
-//string. Use built-in methods for taking the string 
-//apart, reversing it, and putting it back together again.
+//Write a function called reverseMe that takes in a string, reverses it, and returns the reversed string.
+// Use built-in methods for taking the string apart, reversing it, and putting it back together again.
 
-  //Code here
+const reverseMe = (str) => {
+  return str.split('').reverse().join('')
+}
